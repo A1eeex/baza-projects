@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Layouts from "../../molekuls/Layouts/Layouts";
 import TableProjects from "../../molekuls/TableProjekts/TableProjekts";
 import {jsonOb} from "../../../env";
-
+import styled from './Main.module.css'
 const MainPage = () => {
 
     const [data, setData] = useState([])
@@ -20,6 +20,10 @@ const MainPage = () => {
     return (
         <div>
             <Layouts>
+                <div className={styled.wrapTitle}>
+                    <h1>lista Projektów</h1>
+                </div>
+
                 <TableProjects data={data}/>
             </Layouts>
         </div>

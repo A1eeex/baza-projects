@@ -18,38 +18,48 @@ const TableProjects = ({data}) => {
     }
     const filterPost = searchDescription(data, inpValue)
     const headerDescriptions = [
-        {title: 'Numer'},
-        {title: 'Nazwa'},
-        {title: 'Rok'},
-        {title: 'Kraj'},
-        {title: 'Powierzchnia'},
-        {title: 'Kierownik'},
-        {title: 'Data Rozpoczęcia'},
-        {title: 'Data Zakończenia'},
-        {title: 'Zakres'},
-        {title: 'Charakter Obiektu'},
-        {title: 'Wartość'},
-        {title: 'Uwagi'},
+        {id:1, title: 'Numer'},
+        {id:2,title: 'Nazwa'},
+        {id:3,title: 'Rok'},
+        {id:4,title: 'Kraj'},
+        {id:5,title: 'Powierzchnia'},
+        {id:6,title: 'Kierownik'},
+        {id:7,title: 'Data Rozpoczęcia'},
+        {id:8,title: 'Data Zakończenia'},
+        {id:9,title: 'Zakres'},
+        {id:10,title: 'Charakter Obiektu'},
+        {id:11,title: 'Wartość'},
+        {id:12,title: 'Uwagi'},
     ]
 
     return (
         <div className={styled.TableContainer}>
-            <Search onChange={handleChange}
-                    value={inpValue}
-            />
+            <div className={styled.tableTopHeader}>
+                <div>
+                    <Search onChange={handleChange}
+                            value={inpValue}
+                    />
+                </div>
+                <div>
+                    <Link to={'/project-add'}>
+                    <button className={styled.buttonAdd}>+ add project</button>
+                    </Link>
+
+                </div>
+            </div>
             <div className={styled.tableHead}>
-            {headerDescriptions.map((item)=>(
-                    <div>{item.title}</div>
-            ))}</div>
+                {headerDescriptions.map((item) => (
+                    <div key={item.id}>{item.title}</div>
+                ))}</div>
 
             {filterPost.map((item, i) => (
                 <div key={i} className={styled.tableColumn}>
                     <div>{item.work_order_id}</div>
                     <div>
-                    <Link to={`project/:${item.work_order_id}`}>
-                    {item.description}
-                    </Link>
-                </div>
+                        <Link to={`project/:${item.work_order_id}`}>
+                            {item.description}
+                        </Link>
+                    </div>
                     <div>{item.year}</div>
                     <div>{item.city}</div>
                     <div>{item.area}</div>

@@ -1,0 +1,18 @@
+.input_input{
+
+    width: 100%;
+    outline-width: 0;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background-color: white;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    transition: all 250ms ease-in-out;
+    padding: 10px;
+}
+.input_input:focus {
+     border-color: #006ede
+ }

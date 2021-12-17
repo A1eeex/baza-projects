@@ -1,0 +1,43 @@
+.wrapTitleAddProject{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.wrapForm {
+    border:  1px solid #80808069;
+    border-radius: 10px;
+
+}
+.wrapInputs{
+    display: flex;
+    padding: 0 20px 0 20px;
+}
+.leftInput{
+    width: 50%;
+    margin: 10px;
+}
+.rightInput{
+    width: 50%;
+    margin: 10px;
+}
+
+.wrapDownButtons{
+    display: flex;
+    justify-content: end;
+
+    padding: 10px 10px 10px 0;
+    border-top:  1px solid #80808069;
+}
+
+
+.btnBack {
+    background-color: #7491ff;
+    border-color: #5c76d2;
+    color: #ffffff;
+    width: 80px;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+}
+.btnBack:hover{
+    background-color: #637cdc;
+}

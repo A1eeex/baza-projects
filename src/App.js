@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/pages/MainPage/MainPage";
 import ProjectPage from "./components/pages/ProjectPage/ProjectPage";
+import ProjectAddPage from "./components/pages/ProjectAddPage/ProjectAddPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
          <Switch>
              <Route path="/" component={MainPage} exact />
              <Route path="/project/:id" component={ProjectPage} />
+             <Route path="/project-add" component={ProjectAddPage} />
          </Switch>
      </Router>
 

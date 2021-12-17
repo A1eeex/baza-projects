@@ -1,0 +1,8 @@
+.wrapTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.wrapTitle h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
