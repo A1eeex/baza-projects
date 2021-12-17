@@ -1,4 +1,4 @@
-/*search*/
+
 .TableContainer {
     display: block;
     margin: 0 auto;
@@ -6,11 +6,13 @@
     min-width: 320px;
     padding: 0 20px;
 }
-.tableTopHeader{
+
+.tableTopHeader {
     display: flex;
     justify-content: space-between;
 }
-.buttonAdd{
+
+.buttonAdd {
     padding: 5px;
     width: 155px;
     text-transform: uppercase;
@@ -19,9 +21,11 @@
     color: white;
     background-color: #006ede;
 }
-.buttonAdd:hover{
+
+.buttonAdd:hover {
     background-color: #0062c7;
 }
+
 .tableHead {
     display: flex;
     justify-content: space-around;
@@ -34,9 +38,9 @@
 }
 
 .tableHead div {
-    width: 350px;
+    width: 150px;
     padding: 5px;
-
+    text-align: center;
 }
 
 .tableColumn {
@@ -49,19 +53,24 @@
 }
 
 .tableColumn div {
-    width: 350px;
+    width: 150px;
     padding: 5px;
+    text-align: center;
 }
+
 .tableColumn a {
     width: 350px;
     padding: 5px;
 }
-.tableColumnWorkId{
-    width: 100px !important;
+
+.tableColumnNumber {
+    width: 80px !important;
 }
-.tableColumnWorkId{
-    width: 100px !important;
+
+.tableHeadItem:nth-child(1) {
+    width: 80px !important;
 }
+
 .tableColumn__status {
     text-transform: uppercase;
     font-weight: bold;
