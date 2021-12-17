@@ -14,13 +14,13 @@ const ProjectAddPage = () => {
             setData(result)
         })
 
-    useEffect(()=>{
+    useEffect(() => {
         new Promise(async (resolve, reject) => resolve(jsonOb))
             .then(value => {
                 const result = value.response.data
                 setData(result)
             })
-    },[data])
+    }, [data])
     return (
         <div>
             <Layouts>
@@ -33,46 +33,100 @@ const ProjectAddPage = () => {
                         <div className={styled.wrapInputs}>
                             <div className={styled.leftInput}>
                                 <Input
-                                    value={data.length +1}
-                                    readOnly={true}
                                     required
+                                    name='idNumber'
+                                    type='text'
                                     label={'Numer Projektu'}
-                                    placeholder={'Numer Projektu'}/>
+                                    placeholder={'Numer Projektu'}
+                                    value={data.length + 1}
+                                    readOnly={true}
+                                />
                             </div>
                             <div className={styled.rightInput}>
-                                <Input required label={'Name2'} placeholder={'NameProject2'}/>
+                                <Input
+                                    required
+                                    name='name'
+                                    tupe='text'
+                                    label={'Nazwa'}
+                                    placeholder={'Nazwa'}
+                                />
                             </div>
                         </div>
                         <div className={styled.wrapInputs}>
                             <div className={styled.leftInput}>
-                                <Input required label={'Name'} placeholder={'NameProject'}/>
+                                <Input
+                                    type='number'
+                                    name='year'
+                                    required label={'Rok'}
+                                    placeholder={'Rok'}
+                                />
                             </div>
                             <div className={styled.rightInput}>
-                                <Input required label={'Name2'} placeholder={'NameProject2'}/>
+                                <Input
+                                    required
+                                    name='citi'
+                                    tupe='text'
+                                    label={'Kraj'}
+                                    placeholder={'Kraj'}
+                                />
                             </div>
                         </div>
                         <div className={styled.wrapInputs}>
                             <div className={styled.leftInput}>
-                                <Input required label={'Name'} placeholder={'NameProject'}/>
+                                <Input
+                                    required
+                                    name='surface'
+                                    tupe='text'
+                                    label={'Powierzchnia'}
+                                    placeholder={'Powierzchnia'}/>
                             </div>
                             <div className={styled.rightInput}>
-                                <Input required label={'Name2'} placeholder={'NameProject2'}/>
+                                <Input label={'Lista Produktów'} placeholder={'Lista Produktów'}/>
                             </div>
                         </div>
                         <div className={styled.wrapInputs}>
                             <div className={styled.leftInput}>
-                                <Input required label={'Name'} placeholder={'NameProject'}/>
+                                <Input required label={'Kierownik'} placeholder={'Kierownik'}/>
                             </div>
                             <div className={styled.rightInput}>
-                                <Input required label={'Name2'} placeholder={'NameProject2'}/>
+                                <Input required label={'Zakres'} placeholder={'Zakres'}/>
+                            </div>
+                        </div>
+
+                        <div className={styled.wrapInputs}>
+                            <div className={styled.leftInput}>
+                                <Input
+                                    required
+                                    type="date"
+                                    label={'Data Rozpoczęcia'}
+                                    placeholder={'Data Rozpoczęcia'}
+                                />
+
+                            </div>
+                            <div className={styled.rightInput}>
+                                <Input required
+                                       type="date"
+                                       label={'Data Zakończenia'}
+                                       placeholder={'Data Zakończenia'}
+                                />
+
+                            </div>
+                        </div>
+                        <div className={styled.wrapInputs}>
+                            <div className={styled.leftInput}>
+                                <Input required label={'Charakter Obiektu'} placeholder={'Charakter Obiektu'}/>
+                            </div>
+                            <div className={styled.rightInput}>
+                                <Input required label={'Uwagi'} placeholder={'Uwagi'}/>
                             </div>
                         </div>
 
                         <div className={styled.wrapDownButtons}>
                             <div>
-                                <Link to={'/'} >
+                                <Link to={'/'}>
                                     <button className={styled.btnBack}>
-                                        &#8701; back</button>
+                                        &#8701; back
+                                    </button>
                                 </Link>
                             </div>
                             <div>
