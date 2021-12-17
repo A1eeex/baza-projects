@@ -79,7 +79,7 @@ const ProjectPage = () => {
                             Start nalotu:
                         </div>
                         <div className={styled.params}>
-                            someStartNalotu
+                            {projectData?.start_date}
                         </div>
                     </div>
                     <div className={styled.wrapParams}>
@@ -87,7 +87,7 @@ const ProjectPage = () => {
                             Koniec nalotu:
                         </div>
                         <div className={styled.params}>
-                            someKoniecNalotu
+                            {projectData?.end_date}
                         </div>
                     </div>
                     <div className={styled.wrapParams}>
@@ -95,7 +95,7 @@ const ProjectPage = () => {
                             Zakres produktu:
                         </div>
                         <div className={styled.params}>
-                            someZakresProduktu
+                            {projectData?.status}
                         </div>
                     </div>
                     <div className={styled.wrapParams}>
@@ -103,7 +103,7 @@ const ProjectPage = () => {
                             Miejsce archiwizacji:
                         </div>
                         <div className={styled.params}>
-                            someMiejsceArchiwizacji
+                            {projectData?.city}
                         </div>
                     </div>
                     <div className={styled.wrapBtnBack}>
