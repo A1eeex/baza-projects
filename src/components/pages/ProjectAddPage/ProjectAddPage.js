@@ -8,8 +8,6 @@ const ProjectAddPage = () => {
     return (
         <div>
             <Layouts>
-
-
                 <div className={styled.wrapTitleAddProject}>
                     <h1>Add new projekt </h1>
                 </div>
@@ -52,11 +50,12 @@ const ProjectAddPage = () => {
                         <div className={styled.wrapDownButtons}>
                             <div>
                                 <Link to={'/'} >
-                                    <button className={styled.btnBack}> back</button>
+                                    <button className={styled.btnBack}>
+                                        &#8701; back</button>
                                 </Link>
                             </div>
                             <div>
-                                <button type='submit'>Submit</button>
+                                <button className={styled.submitBtn} type='submit'>Submit</button>
                             </div>
 
                         </div>

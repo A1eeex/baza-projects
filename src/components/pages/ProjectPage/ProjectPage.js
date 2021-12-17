@@ -108,7 +108,7 @@ const ProjectPage = () => {
                     </div>
                     <div className={styled.wrapBtnBack}>
                         <Link to={'/'} className={styled.linkBack}>
-                            <button className={styled.btnBack}> back</button>
+                            <button className={styled.btnBack}> &#8701; back</button>
                         </Link>
                     </div>
                 </div>

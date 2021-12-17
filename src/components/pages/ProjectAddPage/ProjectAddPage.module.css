@@ -1,31 +1,35 @@
-.wrapTitleAddProject{
+.wrapTitleAddProject {
     text-align: center;
     margin-bottom: 40px;
 }
+
 .wrapForm {
-    border:  1px solid #80808069;
+    border: 1px solid #80808069;
     border-radius: 10px;
 
 }
-.wrapInputs{
+
+.wrapInputs {
     display: flex;
     padding: 0 20px 0 20px;
 }
-.leftInput{
-    width: 50%;
-    margin: 10px;
-}
-.rightInput{
+
+.leftInput {
     width: 50%;
     margin: 10px;
 }
 
-.wrapDownButtons{
+.rightInput {
+    width: 50%;
+    margin: 10px;
+}
+
+.wrapDownButtons {
     display: flex;
     justify-content: end;
-
-    padding: 10px 10px 10px 0;
-    border-top:  1px solid #80808069;
+    padding: 20px 10px 20px 0;
+    border-top: 1px solid #80808069;
+    margin-top: 30px;
 }
 
 
@@ -37,7 +41,26 @@
     border-radius: 5px;
     outline: none;
     text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
 }
-.btnBack:hover{
+
+.btnBack:hover {
     background-color: #637cdc;
+}
+
+.submitBtn {
+    background-color: #20BF7E;
+    border-color: #1ca46c;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+    margin: 0 20px 0 10px;
+    padding: 5px;
+}
+.submitBtn:hover {
+    background-color: #25de92;
 }
