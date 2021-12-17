@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Layouts from "../../molekuls/Layouts/Layouts";
-import TableProjects from "../../TableProjekts/TableProjekts";
+import TableProjects from "../../molekuls/TableProjekts/TableProjekts";
 import {jsonOb} from "../../../env";
 
 const MainPage = () => {

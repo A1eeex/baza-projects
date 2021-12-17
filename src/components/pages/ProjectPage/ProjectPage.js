@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Layouts from "../../molekuls/Layouts/Layouts";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import styled from "./ProjectPage.module.css"
 import {jsonOb} from "../../../env";
 
@@ -17,7 +17,7 @@ const ProjectPage = () => {
         })
 
     useEffect(() => {
-            const newProject = data.find ((project) => {
+            const newProject = data.find((project) => {
                 return `:${project.work_order_id}` === id
             })
             setProjectData(newProject)
@@ -32,33 +32,87 @@ const ProjectPage = () => {
                 <h1 className={styled.titleProject}>{projectData?.description}</h1>
                 <div className={styled.container}>
 
-                    <div className={styled.titleParams}>
-                        <div>NumerProjektu:</div>
-                        <div>NrBloku:</div>
-                        <div>TypProduktu:</div>
-                        <div>Lista Paramtrów:</div>
-                        <div>Wartości Parametrów:</div>
-                        <div>StartNalotu:</div>
-                        <div>KoniecNalotu:</div>
-                        <div>ZakresProduktu:</div>
-                        <div>MiejsceArchiwizacji:</div>
-
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Numer Projektu:
+                        </div>
+                        <div className={styled.params}>
+                            {projectData?.work_order_id}
+                        </div>
                     </div>
 
-                    <div className={styled.params}>
-                        <div> {projectData?.work_order_id}</div>
-                        <div> NrBloku</div>
-                        <div> some tepe</div>
-                        <div> params</div>
-                        <div> some wartości params</div>
-                        <div> some startNalotu</div>
-                        <div> some KoniecNalotu</div>
-                        <div> some ZakresProduktu</div>
-                        <div> some MiejsceArchiwizacji</div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Nr bloku:
+                        </div>
+                        <div className={styled.params}>
+                            NrBloku
+                        </div>
+                    </div>
 
-
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                          Typ produktu
+                        </div>
+                        <div className={styled.params}>
+                            someTypProduktu
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Lista paramtrów:
+                        </div>
+                        <div className={styled.params}>
+                            someLista Paramtrów:
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Wartości parametrów:
+                        </div>
+                        <div className={styled.params}>
+                            someWartości Parametrów:
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Start nalotu:
+                        </div>
+                        <div className={styled.params}>
+                            someStartNalotu
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Koniec nalotu:
+                        </div>
+                        <div className={styled.params}>
+                            someKoniecNalotu
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Zakres produktu:
+                        </div>
+                        <div className={styled.params}>
+                            someZakresProduktu
+                        </div>
+                    </div>
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Miejsce archiwizacji:
+                        </div>
+                        <div className={styled.params}>
+                            someMiejsceArchiwizacji
+                        </div>
+                    </div>
+                    <div className={styled.wrapBtnBack}>
+                        <Link to={'/'} className={styled.linkBack}>
+                            <button className={styled.btnBack}> back</button>
+                        </Link>
                     </div>
                 </div>
+
 
 
             </Layouts>

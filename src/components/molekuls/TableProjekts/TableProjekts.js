@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from './TableProjekts.module.css'
-import Search from "../atoms/Search/Search";
+import Search from "../../atoms/Search/Search";
 import {Link} from "react-router-dom";
 
 const TableProjects = ({data}) => {
@@ -67,8 +67,8 @@ const TableProjects = ({data}) => {
                     <div>{item.priority}</div>
                     <div>{item.comments}</div>
                 </div>
-
             ))}
+
         </div>
     );
 };
