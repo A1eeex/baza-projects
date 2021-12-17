@@ -13,39 +13,34 @@ const TableProjects = ({data}) => {
             return items
         }
         return items.filter((item) => {
-            return item.description.indexOf(term) > -1
+            return (item.description.indexOf(term)) > -1 || (item.city.indexOf(term) > -1) || (item.start_date.indexOf(term) > -1)
         })
     }
-
     const filterPost = searchDescription(data, inpValue)
+    const headerDescriptions = [
+        {title: 'Numer'},
+        {title: 'Nazwa'},
+        {title: 'Rok'},
+        {title: 'Kraj'},
+        {title: 'Powierzchnia'},
+        {title: 'Kierownik'},
+        {title: 'Data Rozpoczęcia'},
+        {title: 'Data Zakończenia'},
+        {title: 'Zakres'},
+        {title: 'Charakter Obiektu'},
+        {title: 'Wartość'},
+        {title: 'Uwagi'},
+    ]
 
     return (
         <div className={styled.TableContainer}>
             <Search onChange={handleChange}
                     value={inpValue}
             />
-
             <div className={styled.tableHead}>
-                <div>Numer</div>
-                <div>Nazwa</div>
-                <div>Rok</div>
-                <div>Kraj</div>
-                <div>Powierzchnia</div>
-                <div>Kierownik</div>
-                <div>Data Rozpoczęcia</div>
-                <div>Data Zakończenia</div>
-                <div>Zakres</div>
-                <div>Charakter Obiektu</div>
-                <div>Wartość</div>
-                <div>Uwagi</div>
-
-                {/*<div className={ styled.tableHeadWorkId }>Numer Projektu</div>*/}
-                {/*<div>Description</div>*/}
-                {/*<div>Received date</div>*/}
-                {/*<div>Assigned to</div>*/}
-                {/*<div>Status</div>*/}
-                {/*<div>Priority</div>*/}
-            </div>
+            {headerDescriptions.map((item)=>(
+                    <div>{item.title}</div>
+            ))}</div>
 
             {filterPost.map((item, i) => (
                 <div key={i} className={styled.tableColumn}>
@@ -61,7 +56,6 @@ const TableProjects = ({data}) => {
                     <div>{item.manager}</div>
                     <div>{item.start_date}</div>
                     <div>{item.end_date}</div>
-
 
                     {/*<div>{ item.assigned_to.length === 0 ? <b>- - - -</b> : item.assigned_to.map(( person, i ) => (*/}
                     {/*    <div key={ i }> { person.person_name }: <span*/}
