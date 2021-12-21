@@ -48,7 +48,7 @@
     text-decoration: none;
 }
 .btnBack {
-    background-color: #7491ff;
+    background-color: var(--btnBack);
     border-color: #5c76d2;
     color: #ffffff;
     width: 80px;
@@ -57,5 +57,15 @@
     text-transform: uppercase;
 }
 .btnBack:hover{
-    background-color: #637cdc;
+    background-color: var(--btnBackHover);
+}
+.btnEdit{
+    background-color: var(--btnEdit);
+    border-color: var(--btnEdit);
+    color: #ffffff;
+    width: 80px;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+    margin-right: 10px;
 }

@@ -1,3 +1,7 @@
 :root {
-    --costomRed: red
+    /*Buttons*/
+    --btnBack: #7491ff;
+    --btnBackHover: #637cdc;
+    --btnSuccess: #20BF7E;
+    --btnEdit: #8c8b92;
 }

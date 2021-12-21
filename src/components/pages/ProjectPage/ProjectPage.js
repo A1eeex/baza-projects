@@ -110,7 +110,7 @@ const ProjectPage = () => {
                     </div>
                     <div className={styled.wrapBtnBack}>
                         <Link  to={`/project-edit/${id}`} className={styled.linkBack}>
-                            <button className={styled.btnBack}>Edit</button>
+                            <button className={styled.btnEdit}>Edit</button>
                         </Link>
 
                         <Link to={'/'} className={styled.linkBack}>
