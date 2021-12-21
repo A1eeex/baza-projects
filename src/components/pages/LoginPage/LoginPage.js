@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styled from './LoginPage.module.css'
 import backgroundImg from './aer.jpg'
 import logo from '../../molekuls/Header/logo.svg'
+import {Link} from "react-router-dom";
 
 
 const LoginPage = () => {
@@ -70,7 +71,7 @@ const LoginPage = () => {
                     <div className={styled.wrapContent}>
                         <img src={logo} className={styled.formImg} alt="logo"/>
                         <div className={styled.formInputsWrap}>
-                            {(loginDirty && loginError) && <span style={{color: 'red'}}> {loginError}</span>}
+                            {(loginDirty && loginError) && <span className={styled.error}> {loginError}</span>}
                             <input
                                 name='login'
                                 type="text"
@@ -79,7 +80,7 @@ const LoginPage = () => {
                                 onBlur={e => handlerBlur(e)}
                                 placeholder='Login'
                             />
-                            {(passwordDirty && passwordError) && <span style={{color: 'red'}}> {passwordError}</span>}
+                            {(passwordDirty && passwordError) && <span className={styled.error}> {passwordError}</span>}
                             <input
                                 name='password'
                                 type="text"
@@ -90,10 +91,10 @@ const LoginPage = () => {
                             />
                         </div>
 
-                        {/*<Link to={'/'}>*/}
+                        <Link to={'/'}>
                         <button disabled={!formValid} type='submit'  className={styled.loginBth}>login</button>
                         {/*<button disabled={!formValid} type='submit' >login</button>*/}
-                        {/*</Link>*/}
+                        </Link>
                     </div>
                 </form>
 
