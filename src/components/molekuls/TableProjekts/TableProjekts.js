@@ -18,18 +18,18 @@ const TableProjects = ({data}) => {
     }
     const filterPost = searchDescription(data, inpValue)
     const headerDescriptions = [
-        {id: 1, title: 'Numer', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 2, title: 'Nazwa', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 3, title: 'Rok', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 4, title: 'Kraj', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 5, title: 'Powierzchnia', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 6, title: 'Kierownik', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 7, title: 'Data Rozpoczęcia', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 8, title: 'Data Zakończenia', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
+        {id: 1, title: 'Numer'},
+        {id: 2, title: 'Nazwa'},
+        {id: 3, title: 'Rok'},
+        {id: 4, title: 'Kraj'},
+        {id: 5, title: 'Powierzchnia'},
+        {id: 6, title: 'Kierownik'},
+        {id: 7, title: 'Data Rozpoczęcia'},
+        {id: 8, title: 'Data Zakończenia'},
         {id: 9, title: 'Zakres'},
-        {id: 10, title: 'Charakter Obiektu', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 11, title: 'Wartość', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
-        {id: 12, title: 'Uwagi', linkMap: 'https://www.google.pl/maps/@54.5039043,18.3934398,12z'},
+        {id: 10, title: 'Charakter Obiektu'},
+        {id: 11, title: 'Wartość'},
+        {id: 12, title: 'Uwagi'},
     ]
 
     return (

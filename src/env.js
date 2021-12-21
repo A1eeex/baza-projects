@@ -27,7 +27,7 @@ export const jsonOb = {
                 "range": 2,
                 "priority": "Low",
                 "comments": "this is my comment",
-                "coords": "https://www.google.pl/maps/@54.5039043,18.3934398,12z",
+                "coords": "https://demo.obliview.com/przegladarka/mapa.html",
             },
 
             {

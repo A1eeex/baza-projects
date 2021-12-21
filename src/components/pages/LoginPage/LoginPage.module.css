@@ -44,7 +44,7 @@
     height: 100vh;
 }
 .wrapContent{
-    background-color: #b6dc634f;
+    background-color: #b6dc637a;
     padding: 26px;
     min-height: 320px;
     border-radius: 30px;
@@ -86,5 +86,8 @@ display: grid;
 }
 .loginBth:hover{
     background-color: #afb6b6;
-
+}
+.loginBth:disabled{
+    background-color: #bbc6c2;
+    cursor: no-drop;
 }
