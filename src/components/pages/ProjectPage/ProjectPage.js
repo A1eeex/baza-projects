@@ -7,15 +7,17 @@ import {jsonOb} from "../../../env";
 const ProjectPage = () => {
 
     const {id} = useParams()
-    const [data, setData] = useState([])
-    const [projectData, setProjectData] = useState({})
 
+
+    const [data, setData] = useState([])
+     const [projectData, setProjectData] = useState({})
+    console.log('projectDataprojectData', projectData)
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
             const result = value.response.data
             setData(result)
         })
-
+    console.log(data)
     useEffect(() => {
             const newProject = data.find((project) => {
                 return `:${project.work_order_id}` === id
@@ -107,9 +109,14 @@ const ProjectPage = () => {
                         </div>
                     </div>
                     <div className={styled.wrapBtnBack}>
+                        <Link  to={`/project-edit/${id}`} className={styled.linkBack}>
+                            <button className={styled.btnBack}>Edit</button>
+                        </Link>
+
                         <Link to={'/'} className={styled.linkBack}>
                             <button className={styled.btnBack}> &#8701; back</button>
                         </Link>
+
                     </div>
                 </div>
 
