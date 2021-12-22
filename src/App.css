@@ -1,7 +1,53 @@
 :root {
-    /*Buttons*/
-    --btnBack: #7491ff;
-    --btnBackHover: #637cdc;
-    --btnSuccess: #20BF7E;
-    --btnEdit: #8c8b92;
+
+    /*Color*/
+    --white: #ffffff;
+    --black: #161c2d;
+
+
+    --warning: #f17425;
+    --info: #17a2b8;
+    --danger: #e43f52;
+    --dark: #3c4858;
+    --muted: #8492a6;
+    --light: #f8f9fc;
+
+    /*Gray  */
+    --gray-100: #ecedee;
+    --gray-200: #dadcdd;
+    --gray-300: #c8cacc;
+    --gray-400: #b6b9bb;
+    --gray-500: #a4a7ab;
+    --gray-600: #91969a;
+    --gray-700: #7f8489;
+    --gray-800: #6d7278;
+    --gray-900: #5b6167;
+    --gray-1000: #495057;
+
+    /*Blue */
+    --blue-100: #b8cff9;
+    --blue-200: #a1bff7;
+    --blue-300: #89aff5;
+    --blue-400: #729ff3;
+    --blue-500: #5a8ff1;
+    --blue-600: #427eef;
+    --blue-700: #2b6fed;
+    --blue-800: #145feb;
+
+    /*Success*/
+    --success-100: #5cb85c;
+    --success-200: #53a653;
+    --success-300: #4a934a;
+    --success-400: #408140;
+    --success-500: #376e37;
+
+    /*RedMat*/
+    --redMat-100: #ed828e;
+    --redMat-200: #ea6c7a;
+    --redMat-300: #e75566;
+    --redMat-400: #e43f52;
+    --redMat-500: #e1293e;
+    --redMat-600: #d21e32;
+    --redMat-700: #bc1a2d;
 }
+

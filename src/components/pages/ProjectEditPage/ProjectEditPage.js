@@ -24,12 +24,29 @@ const ProjectEditPage = () => {
         }
         , [projects])
 
-    console.log('project data >>> ', project)
     return (
         <div>
             <Layouts>
-                <div className={styled.testDiv}>
-                    {project?.city}
+
+                <div className={styled.wrapTitleProject}>
+                    <h1 className={styled.titleProject}>Edit Project</h1>
+                </div>
+                <div className={styled.container}>
+
+
+                    <div className={styled.wrapParams}>
+                        <div className={styled.titleParams}>
+                            Nazwa Projektu:
+                        </div>
+<div>
+    <input type='text' placeholder={project?.description}/>
+
+</div>
+
+
+
+                    </div>
+
                 </div>
 
             </Layouts>

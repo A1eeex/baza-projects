@@ -1,7 +1,9 @@
+.wrapTitleProject{
+    margin-bottom: 25px;
+}
 .titleProject {
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 13px;
 }
 
 .container {
@@ -48,24 +50,29 @@
     text-decoration: none;
 }
 .btnBack {
-    background-color: var(--btnBack);
-    border-color: #5c76d2;
-    color: #ffffff;
     width: 80px;
+    font-weight: 600;
+    background-color: var(--blue-600);
+    border: 1px solid var(--blue-700);
     border-radius: 5px;
+    color: var(--white);
     outline: none;
     text-transform: uppercase;
 }
 .btnBack:hover{
-    background-color: var(--btnBackHover);
+    background-color: var(--blue-700);
 }
 .btnEdit{
-    background-color: var(--btnEdit);
-    border-color: var(--btnEdit);
-    color: #ffffff;
     width: 80px;
+    margin-right: 10px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-600);
     border-radius: 5px;
     outline: none;
     text-transform: uppercase;
-    margin-right: 10px;
+}
+.btnEdit:hover{
+    background-color: var(--gray-600);
 }

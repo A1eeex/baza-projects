@@ -31,7 +31,9 @@ const ProjectPage = () => {
     return (
         <div>
             <Layouts>
+                <div className={styled.wrapTitleProject}>
                 <h1 className={styled.titleProject}>{projectData?.description}</h1>
+                </div>
                 <div className={styled.container}>
 
                     <div className={styled.wrapParams}>

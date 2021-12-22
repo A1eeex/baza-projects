@@ -13,17 +13,18 @@
 }
 
 .buttonAdd {
-    padding: 5px;
     width: 155px;
-    text-transform: uppercase;
+    padding: 5px;
+    color: var(--white);
+    background-color: var(--blue-700);
+    border: 1px solid var(--blue-800);
     font-weight: bold;
     border-radius: 10px;
-    color: white;
-    background-color: #006ede;
+    text-transform: uppercase;
 }
 
 .buttonAdd:hover {
-    background-color: #0062c7;
+    background-color: var(--blue-600);
 }
 
 .tableHead {

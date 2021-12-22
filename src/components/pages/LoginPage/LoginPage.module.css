@@ -1,5 +1,5 @@
 .error{
-    color: #ca0000f5;
+    color: var(--redMat-500);
     text-transform: uppercase;
     font-weight: bold;
 }

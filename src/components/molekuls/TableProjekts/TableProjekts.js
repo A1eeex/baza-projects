@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from './TableProjekts.module.css'
 import Search from "../../atoms/Search/Search";
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const TableProjects = ({data}) => {
     const [inpValue, setInpValue] = useState('')

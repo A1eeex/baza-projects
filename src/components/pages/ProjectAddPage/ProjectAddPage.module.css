@@ -34,9 +34,9 @@
 
 
 .btnBack {
-    background-color: var(--btnBack);
-    border-color: #5c76d2;
-    color: #ffffff;
+    background-color: var(--blue-600);
+    border: 1px solid var(--blue-700);
+    color: var(--white);
     width: 80px;
     border-radius: 5px;
     outline: none;
@@ -46,13 +46,13 @@
 }
 
 .btnBack:hover {
-    background-color: var(--btnBackHover);
+    background-color: var(--blue-700);
 }
 
 .submitBtn {
-    background-color: #20BF7E;
-    border-color: #1ca46c;
-    color: #ffffff;
+    background-color: var(--success-200);
+    border: 1px solid var(--success-100);
+    color: var(--white);
     font-weight: bold;
     width: 100px;
     border-radius: 5px;
@@ -62,5 +62,5 @@
     padding: 5px;
 }
 .submitBtn:hover {
-    background-color: #25de92;
+    background-color: var(--success-300);
 }
