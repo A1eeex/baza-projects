@@ -10,7 +10,7 @@ const ProjectPage = () => {
 
 
     const [data, setData] = useState([])
-     const [projectData, setProjectData] = useState({})
+    const [projectData, setProjectData] = useState({})
     console.log('projectDataprojectData', projectData)
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
@@ -32,7 +32,7 @@ const ProjectPage = () => {
         <div>
             <Layouts>
                 <div className={styled.wrapTitleProject}>
-                <h1 className={styled.titleProject}>{projectData?.description}</h1>
+                    <h1 className={styled.titleProject}>{projectData?.description}</h1>
                 </div>
                 <div className={styled.container}>
 
@@ -56,7 +56,7 @@ const ProjectPage = () => {
 
                     <div className={styled.wrapParams}>
                         <div className={styled.titleParams}>
-                          Typ produktu
+                            Typ produktu
                         </div>
                         <div className={styled.params}>
                             someTypProduktu
@@ -110,18 +110,17 @@ const ProjectPage = () => {
                             {projectData?.city}
                         </div>
                     </div>
-                    <div className={styled.wrapBtnBack}>
-                        <Link  to={`/project-edit/${id}`} className={styled.linkBack}>
-                            <button className={styled.btnEdit}>Edit</button>
-                        </Link>
+                    <div className={styled.wrapButtons}>
 
-                        <Link to={'/'} className={styled.linkBack}>
+
+                        <Link to={'/'}>
                             <button className={styled.btnBack}> &#8701; back</button>
                         </Link>
-
+                        <Link to={`/project-edit/${id}`} className={styled.linkBack}>
+                            <button className={styled.btnEdit}> Edit &#9998;</button>
+                        </Link>
                     </div>
                 </div>
-
 
 
             </Layouts>

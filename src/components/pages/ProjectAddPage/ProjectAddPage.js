@@ -130,7 +130,7 @@ const ProjectAddPage = () => {
                                 </Link>
                             </div>
                             <div>
-                                <button className={styled.submitBtn} type='submit'>Submit</button>
+                                <button className={styled.submitBtn} type='submit'>Submit &#10003;</button>
                             </div>
 
                         </div>

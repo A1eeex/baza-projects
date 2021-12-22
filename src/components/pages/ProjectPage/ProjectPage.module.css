@@ -40,15 +40,12 @@
 
 }
 
-.wrapBtnBack {
+.wrapButtons {
     display: flex;
     justify-content: end;
     margin: 20px 78px 15px 0;
 }
 
-.linkBack {
-    text-decoration: none;
-}
 .btnBack {
     width: 80px;
     font-weight: 600;
@@ -58,13 +55,14 @@
     color: var(--white);
     outline: none;
     text-transform: uppercase;
+    padding: 5px;
+    margin-right: 10px;
 }
 .btnBack:hover{
     background-color: var(--blue-700);
 }
 .btnEdit{
-    width: 80px;
-    margin-right: 10px;
+    min-width: 80px;
     font-weight: 600;
     color: var(--white);
     background-color: var(--gray-500);
@@ -72,6 +70,7 @@
     border-radius: 5px;
     outline: none;
     text-transform: uppercase;
+    padding: 5px;
 }
 .btnEdit:hover{
     background-color: var(--gray-600);

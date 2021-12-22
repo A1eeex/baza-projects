@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Layouts from "../../molekuls/Layouts/Layouts";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {jsonOb} from "../../../env";
 import styled from './ProjectEditPage.module.css'
 
@@ -9,9 +9,9 @@ const ProjectEditPage = () => {
     const [projects, setProjects] = useState([])
     const [project, setProject] = useState({})
 
-    console.log('project', project)
     const [nameVal, setNameVal] = useState('')
-    console.log('name', nameVal)
+    const [yearVal, setYearVal] = useState('')
+
 
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
@@ -24,6 +24,7 @@ const ProjectEditPage = () => {
             })
             setProject(newProject)
             setNameVal(newProject?.description)
+            setYearVal(newProject?.year)
         }
         , [projects])
 
@@ -51,6 +52,29 @@ const ProjectEditPage = () => {
                                        placeholder={'Nazwa projektu'}
                                 />
                             </div>
+                        </div>
+                        <div className={styled.wrapParams}>
+                            <div className={styled.titleParams}>
+                                Rok:
+                            </div>
+                            <div className={styled.wrapInputParams}>
+                                <input className={styled.inpParams}
+                                       name='year'
+                                       type='text'
+                                       value={yearVal || ''}
+                                       onChange={e => setYearVal(e.target.value)}
+                                       placeholder={'Rok'}
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styled.wrapButtons}>
+
+
+                            <Link to={`/project/${id}`}>
+                                <button className={styled.btnBack}> &#8701; back</button>
+                            </Link>
+                            <button type='submit' className={styled.btnSubmit}>submit &#10003;</button>
                         </div>
                     </form>
 
