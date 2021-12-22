@@ -68,9 +68,22 @@ const ProjectEditPage = () => {
                             </div>
                         </div>
 
+                        <div className={styled.wrapParams}>
+                            <div className={styled.titleParams}>
+                                Rok:
+                            </div>
+                            <div className={styled.wrapInputParams}>
+                                <input className={styled.inpParams}
+                                       name='city'
+                                       type='text'
+                                       value={yearVal || ''}
+                                       onChange={e => setYearVal(e.target.value)}
+                                       placeholder={'Kraj'}
+                                />
+                            </div>
+                        </div>
+
                         <div className={styled.wrapButtons}>
-
-
                             <Link to={`/project/${id}`}>
                                 <button className={styled.btnBack}> &#8701; back</button>
                             </Link>
