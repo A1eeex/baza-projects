@@ -5,47 +5,55 @@ import {jsonOb} from "../../../env";
 import styled from './ProjectEditPage.module.css'
 
 const ProjectEditPage = () => {
-    const {id}= useParams()
-    console.log(id)
+    const {id} = useParams()
     const [projects, setProjects] = useState([])
     const [project, setProject] = useState({})
+
+    console.log('project', project)
+    const [nameVal, setNameVal] = useState('')
+    console.log('name', nameVal)
 
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
             const result = value.response.data
             setProjects(result)
         })
-    console.log(projects)
     useEffect(() => {
             const newProject = projects.find((project) => {
                 return `:${project.work_order_id}` === id
             })
             setProject(newProject)
+            setNameVal(newProject?.description)
         }
         , [projects])
+
 
     return (
         <div>
             <Layouts>
 
                 <div className={styled.wrapTitleProject}>
-                    <h1 className={styled.titleProject}>Edit Project</h1>
+                    <h1 className={styled.titleProject}>Edit Project nr:{project?.work_order_id}</h1>
                 </div>
                 <div className={styled.container}>
 
-
-                    <div className={styled.wrapParams}>
-                        <div className={styled.titleParams}>
-                            Nazwa Projektu:
+                    <form>
+                        <div className={styled.wrapParams}>
+                            <div className={styled.titleParams}>
+                                Nazwa Projektu:
+                            </div>
+                            <div className={styled.wrapInputParams}>
+                                <input className={styled.inpParams}
+                                       name='name'
+                                       type='text'
+                                       value={nameVal || ''}
+                                       onChange={e => setNameVal(e.target.value)}
+                                       placeholder={'Nazwa projektu'}
+                                />
+                            </div>
                         </div>
-<div>
-    <input type='text' placeholder={project?.description}/>
+                    </form>
 
-</div>
-
-
-
-                    </div>
 
                 </div>
 
