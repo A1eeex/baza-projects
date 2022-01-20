@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from './TableProjekts.module.css'
 import Search from "../../atoms/Search/Search";
 import {Link} from "react-router-dom";
+import Pagination from "../../atoms/Pagination/Pagination";
 
 const TableProjects = ({data}) => {
     const [inpValue, setInpValue] = useState('')
@@ -13,7 +14,7 @@ const TableProjects = ({data}) => {
             return items
         }
         return items.filter((item) => {
-            return (item.description.indexOf(term)) > -1 || (item.city.indexOf(term) > -1) || (item.start_date.indexOf(term) > -1)|| (item.year.toString().indexOf(term) > -1)
+            return (item.description.indexOf(term)) > -1 || (item.city.indexOf(term) > -1) || (item.start_date.indexOf(term) > -1) || (item.year.toString().indexOf(term) > -1)
         })
     }
     const filterPost = searchDescription(data, inpValue)
@@ -31,6 +32,20 @@ const TableProjects = ({data}) => {
         {id: 11, title: 'Wartość'},
         {id: 12, title: 'Uwagi'},
     ]
+    // ---------------------------------PAGINATION---------------------------------
+    const [currentPage, setCurrentPage] = useState(1)
+    const [postPerPage] = useState(10)
+
+    const [hash, setHash] = useState(Number(window.location.hash.replace(/#/g, '')));
+
+
+    // ----------Get current post----------
+    const indexOfLastPost = currentPage * postPerPage
+    const indexOfFirstPost = indexOfLastPost -postPerPage
+    const currentPost = filterPost.slice(indexOfFirstPost,indexOfLastPost)
+    // ----------Change pagination----------
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
     return (
         <div className={styled.TableContainer}>
@@ -52,7 +67,7 @@ const TableProjects = ({data}) => {
                     <div className={styled.tableHeadItem} key={item.id}>{item.title}</div>
                 ))}</div>
 
-            {filterPost.map((item, i) => (
+            {currentPost.map((item, i) => (
                 <div key={i} className={styled.tableColumn}>
                     <div className={styled.tableColumnNumber}>{item.work_order_id}</div>
                     <div>
@@ -62,7 +77,7 @@ const TableProjects = ({data}) => {
                     </div>
                     <div>{item.year}</div>
                     <div>
-                        <a href={item.coords} target="blank" >
+                        <a href={item.coords} target="blank">
                             {item.city}
                         </a>
 
@@ -83,7 +98,7 @@ const TableProjects = ({data}) => {
                     <div>{item.comments}</div>
                 </div>
             ))}
-
+<Pagination postPerPage={postPerPage} totalPost={data.length} paginate={paginate} />
         </div>
     );
 };
