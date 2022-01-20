@@ -98,7 +98,7 @@ const TableProjects = ({data}) => {
                     <div>{item.comments}</div>
                 </div>
             ))}
-<Pagination postPerPage={postPerPage} totalPost={data.length} paginate={paginate} />
+<Pagination postPerPage={postPerPage} totalPost={data.length} paginate={paginate} hash={hash} />
         </div>
     );
 };

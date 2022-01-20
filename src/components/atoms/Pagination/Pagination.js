@@ -1,6 +1,6 @@
 import React from 'react';
-
-const Pagination = ({totalPost,postPerPage, paginate}) => {
+import styled from './Pagination.module.css'
+const Pagination = ({totalPost,postPerPage, paginate, hash}) => {
     const pageNumber = []
     for(let i = 1; i<= Math.ceil(totalPost/ postPerPage); i++){
         pageNumber.push(i)
@@ -8,9 +8,9 @@ const Pagination = ({totalPost,postPerPage, paginate}) => {
     return (
         <div>
             <nav>
-                <ul>
+                <ul className={styled.pagination}>
                     {pageNumber.map((item, i)=>(
-                        <li key={i}>
+                        <li key={i} className={`${styled.paginationItem} ${(i +1) === hash ? styled.paginationItemActive : null}`}>
                             <a onClick={()=> paginate(item)}> {item}</a>
                         </li>
                     ) )}

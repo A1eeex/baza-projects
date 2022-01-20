@@ -1,0 +1,23 @@
+.pagination {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+
+.paginationItem{
+    margin-right: 10px;
+}
+.paginationItem:hover{
+    border-color: #4c58e1;
+    background-color: #4c58e1;
+    color: white;
+}
+
+.paginationItemActive{
+    background-color: #4c58e1;
+    color: white;
+}
