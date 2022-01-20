@@ -5,19 +5,37 @@
     justify-content: start;
 
     padding: 0;
-    margin: 0 10px 0 0;
+    margin: 20px 10px 20px 0px;
 }
 
 .paginationItem{
+    text-decoration: none;
     margin-right: 10px;
+    padding: 0;
 }
 .paginationItem:hover{
-    border-color: #4c58e1;
-    background-color: #4c58e1;
+    background-color: #757fec;
     color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid rgba(192, 191, 191, 0.51);
 }
 
 .paginationItemActive{
-    background-color: #4c58e1;
+    border: 1px solid rgba(192, 191, 191, 0.51);
+    margin-right: 10px;
+    background-color: #757fec;
     color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.paginationLink{
+    font-size: 18px;
+    border: 1px solid rgba(192, 191, 191, 0.51);
+    color: black;
+    padding: 0px 13px 1px 13px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
 }
