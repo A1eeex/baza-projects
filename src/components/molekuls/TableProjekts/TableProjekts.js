@@ -13,7 +13,7 @@ const TableProjects = ({data}) => {
             return items
         }
         return items.filter((item) => {
-            return (item.description.indexOf(term)) > -1 || (item.city.indexOf(term) > -1) || (item.start_date.indexOf(term) > -1)
+            return (item.description.indexOf(term)) > -1 || (item.city.indexOf(term) > -1) || (item.start_date.indexOf(term) > -1)|| (item.year.toString().indexOf(term) > -1)
         })
     }
     const filterPost = searchDescription(data, inpValue)
@@ -62,7 +62,7 @@ const TableProjects = ({data}) => {
                     </div>
                     <div>{item.year}</div>
                     <div>
-                        <a href={item.coords} target="_blank" >
+                        <a href={item.coords} target="blank" >
                             {item.city}
                         </a>
 

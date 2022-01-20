@@ -8,6 +8,8 @@ import {jsonOb} from "../../../env";
 const ProjectAddPage = () => {
     const [data, setData] = useState([])
 
+    const [startDateVal, setStartDateVal] = useState('')
+
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
             const result = value.response.data
@@ -97,6 +99,8 @@ const ProjectAddPage = () => {
                             <div className={styled.leftInput}>
                                 <Input
                                     required
+                                    name='startDate'
+
                                     type="date"
                                     label={'Data Rozpoczęcia'}
                                     placeholder={'Data Rozpoczęcia'}
@@ -105,11 +109,11 @@ const ProjectAddPage = () => {
                             </div>
                             <div className={styled.rightInput}>
                                 <Input required
+                                       name='endDate'
                                        type="date"
                                        label={'Data Zakończenia'}
                                        placeholder={'Data Zakończenia'}
                                 />
-
                             </div>
                         </div>
                         <div className={styled.wrapInputs}>
@@ -120,7 +124,6 @@ const ProjectAddPage = () => {
                                 <Input required label={'Uwagi'} placeholder={'Uwagi'}/>
                             </div>
                         </div>
-
                         <div className={styled.wrapDownButtons}>
                             <div>
                                 <Link to={'/'}>
@@ -130,7 +133,7 @@ const ProjectAddPage = () => {
                                 </Link>
                             </div>
                             <div>
-                                <button className={styled.submitBtn} type='submit'>Submit &#10003;</button>
+                                <button className={styled.submitBtn} onClick={e => e.preventDefault()} type='submit'>Submit &#10003;</button>
                             </div>
 
                         </div>

@@ -4,7 +4,6 @@ import backgroundImg from './aer.jpg'
 import logo from '../../molekuls/Header/logo.svg'
 import {Link} from "react-router-dom";
 
-
 const LoginPage = () => {
     const [loginVal, setLoginVal] = useState('')
     const [passwordVal, setPasswordVal] = useState('')
@@ -97,7 +96,6 @@ const LoginPage = () => {
                         </Link>
                     </div>
                 </form>
-
 
             </main>
         </div>
