@@ -48,15 +48,17 @@
     display: flex;
 }
 .logoutBtn{
+    transition: all .4s;
     width: 100px;
     padding: 3px;
     text-transform: uppercase;
     font-weight: 700;
-    background-color: var(--gray-700);
-    border: 1px solid var(--gray-800);;
-    color: white;
-    border-radius: 5px;
+    background-color: var( --redMat-500);
+    border: 1px solid var( --redMat-600);;
+    color: var(--white);
+    border-radius: 20px;
 }
 .logoutBtn:hover{
-    background-color: var(--gray-600);
+    margin-right: 4px;
+    background-color: var( --redMat-300);
 }

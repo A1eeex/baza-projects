@@ -2,6 +2,7 @@ import React from 'react';
 import styled from './Header.module.css'
 import logo from './logo.svg'
 
+
 import {Link} from "react-router-dom";
 
 const Header = () => {
@@ -25,10 +26,11 @@ const Header = () => {
 
                             <div className={styled.header_right_logout}>
                                 <Link to={'/login'}>
-                                   <button className={styled.logoutBtn}>logout &#10153; </button>
+
+                                   <button className={styled.logoutBtn}><i className="fas fa-power-off"/> logout
+                                   </button>
                                 </Link>
                             </div>
-
 
                         </div>
                     </div>

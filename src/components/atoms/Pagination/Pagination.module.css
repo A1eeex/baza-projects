@@ -10,22 +10,24 @@
 
 .paginationItem{
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 5px;
     padding: 0;
+
 }
-.paginationItem:hover{
-    background-color: #757fec;
-    color: white;
+.paginationItem a:hover{
+    background-color:var(--blue-200);
+    color: var(--white);
     border-radius: 5px;
     text-decoration: none;
     border: 1px solid rgba(192, 191, 191, 0.51);
+    cursor: pointer;
 }
 
-.paginationItemActive{
+.paginationItemActive a{
     border: 1px solid rgba(192, 191, 191, 0.51);
-    margin-right: 10px;
-    background-color: #757fec;
-    color: white;
+    margin-right: 5px;
+    background-color:var(--blue-500);
+    color: var(--white);
     border-radius: 5px;
     text-decoration: none;
 }
@@ -33,7 +35,7 @@
 .paginationLink{
     font-size: 18px;
     border: 1px solid rgba(192, 191, 191, 0.51);
-    color: black;
+    color: var(--black);
     padding: 0px 13px 1px 13px;
     text-decoration: none;
     border-radius: 5px;
