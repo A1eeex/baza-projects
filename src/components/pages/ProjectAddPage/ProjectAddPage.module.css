@@ -43,6 +43,7 @@
     text-transform: uppercase;
     padding: 5px;
     font-weight: bold;
+    transition: all 0.2s;
 }
 
 .btnBack:hover {
@@ -60,6 +61,7 @@
     text-transform: uppercase;
     margin: 0 20px 0 10px;
     padding: 5px;
+    transition: all 0.2s;
 }
 .submitBtn:hover {
     background-color: var(--success-300);
