@@ -38,13 +38,13 @@ const TableProjects = ({data}) => {
 
     const [hash, setHash] = useState(Number(window.location.hash.replace(/#/g, ''))||1);
 
-
     // ----------Get current post----------
     const indexOfLastPost = currentPage * postPerPage
     const indexOfFirstPost = indexOfLastPost -postPerPage
     const currentPost = filterPost.slice(indexOfFirstPost,indexOfLastPost)
     // ----------Change pagination----------
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     const handlePaginationChange = (e) => {
         const element = e.target
         setHash(Number(element.textContent));
@@ -101,7 +101,12 @@ const TableProjects = ({data}) => {
                     <div>{item.comments}</div>
                 </div>
             ))}
-<Pagination onClick={handlePaginationChange} postPerPage={postPerPage} totalPost={data.length} paginate={paginate} hash={hash} />
+           <div className={styled.addPlace}/>
+            <footer className={styled.footerPagination}>
+                <div className={styled.pagination}>
+                    <Pagination onClick={handlePaginationChange} postPerPage={postPerPage} totalPost={data.length} paginate={paginate} hash={hash} />
+                </div>
+            </footer>
         </div>
     );
 };

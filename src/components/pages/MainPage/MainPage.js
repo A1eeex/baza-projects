@@ -25,6 +25,8 @@ const MainPage = () => {
                 </div>
 
                 <TableProjects data={data}/>
+
+
             </Layouts>
         </div>
     );
