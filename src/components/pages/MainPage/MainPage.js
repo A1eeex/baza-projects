@@ -3,6 +3,7 @@ import Layouts from "../../molekuls/Layouts/Layouts";
 import TableProjects from "../../molekuls/TableProjekts/TableProjekts";
 import {jsonOb} from "../../../env";
 import styled from './Main.module.css'
+import {Redirect} from "react-router-dom";
 const MainPage = () => {
 
     const [data, setData] = useState([])
@@ -18,17 +19,15 @@ const MainPage = () => {
         , [])
 
     return (
-        <div>
+        // <Redirect to='/login' />
+        <>
             <Layouts>
                 <div className={styled.wrapTitle}>
                     <h1>lista Projektów</h1>
                 </div>
-
                 <TableProjects data={data}/>
-
-
             </Layouts>
-        </div>
+        </>
     );
 };
 

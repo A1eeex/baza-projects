@@ -91,8 +91,12 @@ const LoginPage = () => {
                         </div>
 
                         <Link to={'/'}>
-                        <button disabled={!formValid} type='submit'  className={styled.loginBth}>login</button>
-                        {/*<button disabled={!formValid} type='submit' >login</button>*/}
+                            <button disabled={!formValid} type='submit' className={styled.loginBth}>login</button>
+                            {/*<button disabled={!formValid} type='submit' >login</button>*/}
+                        </Link>
+
+                        <Link to={'/registration'}>
+                            Registration
                         </Link>
                     </div>
                 </form>

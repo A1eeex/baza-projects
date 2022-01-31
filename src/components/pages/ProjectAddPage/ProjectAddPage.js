@@ -24,7 +24,7 @@ const ProjectAddPage = () => {
             })
     }, [data])
     return (
-        <div>
+        <>
             <Layouts>
                 <div className={styled.wrapTitleAddProject}>
                     <h1>Add new projekt </h1>
@@ -140,7 +140,7 @@ const ProjectAddPage = () => {
                     </form>
                 </div>
             </Layouts>
-        </div>
+        </>
     );
 };
 

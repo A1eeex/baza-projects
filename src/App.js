@@ -1,13 +1,14 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, Redirect,
 } from "react-router-dom";
 import MainPage from "./components/pages/MainPage/MainPage";
 import ProjectPage from "./components/pages/ProjectPage/ProjectPage";
 import ProjectAddPage from "./components/pages/ProjectAddPage/ProjectAddPage";
 import LoginPage from "./components/pages/LoginPage/LoginPage";
 import ProjectEditPage from "./components/pages/ProjectEditPage/ProjectEditPage";
+import RegistrationPage from "./components/pages/RegistrationPage/RegistrationPage";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
              <Route path="/project-edit/:id" component={ProjectEditPage} />
              <Route path="/project-add" component={ProjectAddPage} />
              <Route path="/login" component={LoginPage} />
+             <Route path="/registration" component={RegistrationPage} />
+             <Redirect to={'/'}/>
          </Switch>
      </Router>
  </div>
