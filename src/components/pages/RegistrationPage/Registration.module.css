@@ -51,15 +51,29 @@
 .wrapContent {
     background-color: #b8b5b5b3;
     padding: 26px;
-    min-height: 330px;
+    /*min-height: 330px;*/
     border-radius: 30px;
     text-align: center;
+    min-height: fit-content;
 }
 
 .wrapInputs {
     display: grid;
 }
-
+.dataRegister:nth-child(1n){
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--gray-700);
+    padding: 5px;
+    transition: all .4s;
+}
+.dataRegister:nth-last-child(1){
+ padding: 2px
+}
+.dataRegister:focus:nth-child(1n){
+    border: 2px solid var(--gray-800);
+}
 
 .formImg {
     margin-left: 35px;
@@ -73,8 +87,6 @@
 .wrapSubmitRegistrationBtn {
     display: flex;
     justify-content: center;
-
-
 }
 
 .submitRegistrationBtn {
@@ -88,7 +100,7 @@
     letter-spacing: 2px;
     background-color: var(--success-300);
     color: var(--white);
-    margin: 5px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .submitRegistrationBtn:hover {
@@ -103,11 +115,17 @@
 .registerWrapSybTitleInp {
     background-color: var(--white);
 }
+.registerWrapSybTitleInp:focus {
+    background-color: var(--gray-800);
+}
 .registerWrapSybTitleInp input[type=date] {
     border: transparent;
+    padding: 3px;
+}
+.registerWrapSybTitleInp input[type=date]:focus {
+    outline: none;
 }
 .registerSybTitle {
     padding-right: 10px;
     color: var(--gray-700);
-
 }

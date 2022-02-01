@@ -12,46 +12,50 @@ const RegistrationPage = () => {
 
                     <form className={styled.loginFormContainer}>
                         <div className={styled.wrapContent}>
-                           <h1 className={styled.registrationTitle}>Registration</h1>
+                            <h1 className={styled.registrationTitle}>Registration</h1>
                             <div className={styled.wrapInputs}>
                                 <input
+                                    className={styled.dataRegister}
                                     name='firstName'
                                     type="text"
                                     placeholder='First name'
                                 />
                                 <input
+                                    className={styled.dataRegister}
                                     name='lastName'
                                     type="text"
                                     placeholder='Last name'
                                 />
                                 <input
+                                    className={styled.dataRegister}
                                     name='email'
                                     type="email"
                                     placeholder='Email'
                                 />
                                 <input
+                                    className={styled.dataRegister}
                                     name='phoneNumber'
                                     type="tel"
                                     placeholder='Phone number'
                                 />
-                                <div className={styled.registerWrapSybTitleInp}>
+                                <div className={styled.registerWrapSybTitleInp + ' ' +styled.dataRegister}>
                                     <span className={styled.registerSybTitle}>Birthday:</span>
                                     <input
-                                    name='birthday'
-                                    type="date"
-                                />
+                                        name='birthday'
+                                        type="date"
+                                    />
                                 </div>
 
                             </div>
 
                             <div className={styled.wrapSubmitRegistrationBtn}>
                                 <Link to={'/'}>
-                                    <button  type='submit' className={styled.submitRegistrationBtn}>Accept</button>
+                                    <button type='submit' className={styled.submitRegistrationBtn}>Accept</button>
                                 </Link>
                             </div>
 
                             <Link to={'/login'}>
-                               login
+                                login
                             </Link>
                         </div>
                     </form>
