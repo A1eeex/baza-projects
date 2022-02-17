@@ -39,25 +39,25 @@ const Header = () => {
             {/*</header>*/}
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
-                        <Link style={{textDecoration: 'none'}} to='/'>
-                                             <div className={styled.header_logo}>
-                                             <img src={logo} alt="logo"/>
-                                        </div>
-                                      </Link>
+                    <Navbar.Brand href='/'>
+                        <div className={styled.header_logo}>
+                            <img src={logo} alt="logo"/>
+                        </div>
+
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse   id="responsive-navbar-nav">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
 
-                        <Nav>
-                            <div className={styled.header_right_logout}>
-                                               <Link to={'/login'}>
+                    <Navbar.Collapse id="responsive-navbar-nav">
 
-                                                 <button className={styled.logoutBtn}><i className="fas fa-power-off"/> logout
-                                                 </button>
-                                                 </Link>
-                                             </div>
-                        </Nav>
+                        <Nav className="justify-content-end flex-grow-1 pe-3">
+
+                                    <Link to={'/login'}>
+
+                                        <button className={styled.logoutBtn}><i className="fas fa-power-off"/> logout
+                                        </button>
+                                    </Link>
+
+                            </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

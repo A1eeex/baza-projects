@@ -62,3 +62,7 @@
     margin-right: 4px;
     background-color: var( --redMat-300);
 }
+/*---------------------------*/
+.header_wrap_content{
+    justify-content:end;
+}
