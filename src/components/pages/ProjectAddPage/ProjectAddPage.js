@@ -7,7 +7,6 @@ import {jsonOb} from "../../../env";
 
 const ProjectAddPage = () => {
     const [data, setData] = useState([])
-
     const [startDateVal, setStartDateVal] = useState('')
 
     new Promise(async (resolve, reject) => resolve(jsonOb))
@@ -133,7 +132,8 @@ const ProjectAddPage = () => {
                                 </Link>
                             </div>
                             <div>
-                                <button className={styled.submitBtn} onClick={e => e.preventDefault()} type='submit'>Submit &#10003;</button>
+                                <button className={styled.submitBtn} onClick={e => e.preventDefault()}
+                                        type='submit'>Submit &#10003;</button>
                             </div>
 
                         </div>

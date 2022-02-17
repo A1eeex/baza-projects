@@ -6,7 +6,6 @@
 .wrapForm {
     border: 1px solid #80808069;
     border-radius: 10px;
-
 }
 
 .wrapInputs {
@@ -63,6 +62,19 @@
     padding: 5px;
     transition: all 0.2s;
 }
+
 .submitBtn:hover {
     background-color: var(--success-300);
+}
+
+@media (max-width: 912px){
+    .wrapInputs{
+        display: block;
+    }
+    .leftInput{
+        width: 100%;
+    }
+    .rightInput{
+        width: 100%;
+    }
 }

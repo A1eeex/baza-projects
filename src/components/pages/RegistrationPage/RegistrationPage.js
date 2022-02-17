@@ -38,14 +38,13 @@ const RegistrationPage = () => {
                                     type="tel"
                                     placeholder='Phone number'
                                 />
-                                <div className={styled.registerWrapSybTitleInp + ' ' +styled.dataRegister}>
+                                <div className={styled.registerWrapSybTitleInp + ' ' + styled.dataRegister}>
                                     <span className={styled.registerSybTitle}>Birthday:</span>
                                     <input
                                         name='birthday'
                                         type="date"
                                     />
                                 </div>
-
                             </div>
 
                             <div className={styled.wrapSubmitRegistrationBtn}>
@@ -59,11 +58,9 @@ const RegistrationPage = () => {
                             </Link>
                         </div>
                     </form>
-
                 </main>
             </div>
         </>
-
     );
 };
 

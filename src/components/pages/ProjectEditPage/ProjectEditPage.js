@@ -12,7 +12,6 @@ const ProjectEditPage = () => {
     const [nameVal, setNameVal] = useState('')
     const [yearVal, setYearVal] = useState('')
 
-
     new Promise(async (resolve, reject) => resolve(jsonOb))
         .then(value => {
             const result = value.response.data
@@ -28,11 +27,9 @@ const ProjectEditPage = () => {
         }
         , [projects])
 
-
     return (
-        <div>
+        <>
             <Layouts>
-
                 <div className={styled.wrapTitleProject}>
                     <h1 className={styled.titleProject}>Edit Project nr:{project?.work_order_id}</h1>
                 </div>
@@ -90,12 +87,9 @@ const ProjectEditPage = () => {
                             <button type='submit' className={styled.btnSubmit}>submit &#10003;</button>
                         </div>
                     </form>
-
-
                 </div>
-
             </Layouts>
-        </div>
+        </>
     );
 };
 

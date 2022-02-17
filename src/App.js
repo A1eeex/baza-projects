@@ -9,10 +9,11 @@ import ProjectAddPage from "./components/pages/ProjectAddPage/ProjectAddPage";
 import LoginPage from "./components/pages/LoginPage/LoginPage";
 import ProjectEditPage from "./components/pages/ProjectEditPage/ProjectEditPage";
 import RegistrationPage from "./components/pages/RegistrationPage/RegistrationPage";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
- <div>
+ <>
      <Router>
          <Switch>
              <Route path="/" component={MainPage} exact />
@@ -24,7 +25,7 @@ function App() {
              <Redirect to={'/'}/>
          </Switch>
      </Router>
- </div>
+ </>
   );
 }
 
