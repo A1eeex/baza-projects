@@ -12,55 +12,58 @@ const Header = () => {
     }
     return (
         <div>
-            {/*<header className={styled.header}>*/}
-            {/*    <div className={styled.header_container}>*/}
-            {/*        <div className={styled.header_column}>*/}
-            {/*            <div className={styled.header_left}>*/}
-            {/*                <Link style={{textDecoration: 'none'}} to='/'>*/}
-            {/*                    <div className={styled.header_logo}>*/}
-            {/*                        <img src={logo} alt="logo"/>*/}
-            {/*                    </div>*/}
-            {/*                </Link>*/}
-            {/*            </div>*/}
-            {/*            <div className={styled.header_right}>*/}
-
-            {/*                <div className={styled.header_right_logout}>*/}
-            {/*                    <Link to={'/login'}>*/}
-
-            {/*                       <button className={styled.logoutBtn}><i className="fas fa-power-off"/> logout*/}
-            {/*                       </button>*/}
-            {/*                    </Link>*/}
-            {/*                </div>*/}
-
-            {/*            </div>*/}
-            {/*        </div>*/}
-
-            {/*    </div>*/}
-            {/*</header>*/}
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href='/'>
-                        <div className={styled.header_logo}>
-                            <img src={logo} alt="logo"/>
+            <header className={styled.header}>
+                <div className={styled.header_container}>
+                    <div className={styled.header_column}>
+                        <div className={styled.header_left}>
+                            <Link style={{textDecoration: 'none'}} to='/'>
+                                <div className={styled.header_logo}>
+                                    <img src={logo} alt="logo"/>
+                                </div>
+                            </Link>
                         </div>
+                        <div className={styled.header_right}>
 
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                            <div className={styled.header_right_logout}>
+                                <Link className={styled.wrapLogoutIcons} to={'/login'}>
+                                    <div className={styled.headerLogOutIcon1}>
+                                    </div>
+                                </Link>
+                            </div>
 
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-                        <Nav className="justify-content-end flex-grow-1 pe-3">
+            {/*<Navbar bg="transparent" expand="lg" variant="dark">*/}
+            {/*    <Container>*/}
+            {/*        <Navbar.Brand href='/'>*/}
+            {/*            <div className={styled.header_logo}>*/}
+            {/*                <img src={logo} alt="logo"/>*/}
+            {/*            </div>*/}
 
-                                    <Link to={'/login'}>
+            {/*        </Navbar.Brand>*/}
+            {/*        <Navbar.Toggle style={{ borderColor: 'black'}} aria-controls="responsive-navbar-nav">*/}
+            {/*               <span>*/}
+            {/*                <i style={{color: 'black', borderColor: 'black'}} className="fa-solid fa-bars"/>*/}
+            {/*                   </span>*/}
+            {/*        </Navbar.Toggle>*/}
 
-                                        <button className={styled.logoutBtn}><i className="fas fa-power-off"/> logout
-                                        </button>
-                                    </Link>
+            {/*        <Navbar.Collapse style={{ borderColor: 'gray' }} id="responsive-navbar-nav">*/}
+            {/*            <Nav className="justify-content-end flex-grow-1 pe-3">*/}
 
-                            </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+            {/*                <Link className={styled.wrapLogoutIcons}to={'/login'}>*/}
+            {/*                        <div className={styled.headerLogOutIcon1}>*/}
+            {/*                        </div>*/}
+
+            {/*                    /!*<button className={styled.logoutBtn}><i className="fa-solid fa-blog"></i> logout*!/*/}
+            {/*                    /!*</button>*!/*/}
+            {/*                </Link>*/}
+            {/*            </Nav>*/}
+            {/*        </Navbar.Collapse>*/}
+            {/*    </Container>*/}
+            {/*</Navbar>*/}
         </div>
     );
 };
