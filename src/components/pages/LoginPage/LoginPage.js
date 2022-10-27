@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from './LoginPage.module.css'
 import backgroundImg from './aer.jpg'
-import logo from '../../molekuls/Header/logo.svg'
+import logo from '../../molekuls/Header/images_logo.png'
 import {Link} from "react-router-dom";
 
 const LoginPage = () => {
@@ -91,7 +91,7 @@ const LoginPage = () => {
                         </div>
 
                         <Link to={'/'}>
-                            <button disabled={!formValid} type='submit' className={styled.loginBth}>login</button>
+                            <button disabled={!formValid} type='submit' className={!formValid? styled.loginBth: styled.validBnt}>login</button>
                             {/*<button disabled={!formValid} type='submit' >login</button>*/}
                         </Link>
 

@@ -55,8 +55,9 @@
     text-align: center;
 }
 .formImg{
-    margin-left: 35px;
+    /*margin-left: 35px;*/
     width: 330px;
+    margin-bottom: 20px;
 }
 .formInputsWrap{
 display: grid;
@@ -88,10 +89,30 @@ display: grid;
     color: #696969;
     margin: 5px 0 10px 0;
 }
+
 .loginBth:hover{
     background-color: #afb6b6;
 }
 .loginBth:disabled{
     background-color: #bbc6c2;
     cursor: no-drop;
+}
+.validBnt{
+    width: 100%;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #a6a6a6;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: #38bb3b;
+    color: #e5e5e5;
+    margin: 5px 0 10px 0;
+    transition: all .3s linear;
+}
+.validBnt:hover{
+    color: #ffffff;
+    background-color: #249427;
 }

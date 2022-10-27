@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import styled from './Header.module.css'
-import logo from './logo.svg'
+import logo from './images_logo.png'
 
 import {Link} from "react-router-dom";
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'

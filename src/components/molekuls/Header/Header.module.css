@@ -32,6 +32,9 @@
     color: #252525;
     text-transform: uppercase;
 }
+.header_logo img{
+    width: 140px;
+}
 
 .header_search {
     height: 100%;
